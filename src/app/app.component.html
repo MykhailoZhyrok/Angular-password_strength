@@ -1,0 +1,8 @@
+<div class="wrapper">
+<div>
+  <input type="password" [(ngModel)]="password" (input)="calculateStrength()">
+</div>
+<div [ngStyle]="{'background-color': passwordStrength === 'gray' ? 'gray' : 'transparent'}">Easy</div>
+<div [ngStyle]="{'background-color': passwordStrength === 'red' ? 'gray' : (passwordStrength === 'yellow' ? 'yellow' : 'transparent')}">Medium</div>
+<div [ngStyle]="{'background-color': passwordStrength === 'green' ? 'green' : 'transparent'}">Strong</div>
+</div>
